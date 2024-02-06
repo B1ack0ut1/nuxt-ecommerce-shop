@@ -1,5 +1,11 @@
 <template>
-  <div></div>
+  <div v-for="product in products">
+    <div>{{ product.title }}</div>
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
+const { products } = await useProducts();
+
+console.log(products);
+</script>
